@@ -1,0 +1,422 @@
+{
+  "project": {
+    "name": "CodeSense",
+    "tagline": "Learn to build with AI",
+    "version": "2.0.0",
+    "description": "An AI Agent that analyzes any programming file, breaks it into logical segments, and teaches the user how every part works through an interactive chat tutor with a customizable personality.",
+    "purpose": "To fight AI-induced passivity by making people actually understand the code they write or use, rather than blindly copying from AI tools.",
+    "owner": {
+      "github": "TBD",
+      "email": "TBD"
+    }
+  },
+
+  "theme": {
+    "name": "Black Gold Cyan",
+    "colors": {
+      "background": "#0a0a0a",
+      "surface": "#111111",
+      "primary": "#FFD700",
+      "accent": "#00FFFF",
+      "text": "#FFFFFF",
+      "text_muted": "#888888",
+      "border": "#222222",
+      "error": "#FF4444",
+      "success": "#00FF88"
+    },
+    "typography": {
+      "font_primary": "Inter",
+      "font_code": "JetBrains Mono",
+      "sizes": {
+        "hero_title": "64px",
+        "section_title": "36px",
+        "body": "16px",
+        "code": "14px",
+        "small": "12px"
+      }
+    },
+    "effects": {
+      "gold_glow": "0 0 20px rgba(255, 215, 0, 0.3)",
+      "cyan_glow": "0 0 20px rgba(0, 255, 255, 0.3)",
+      "card_blur": "backdrop-filter: blur(10px)",
+      "border_gradient": "linear-gradient(135deg, #FFD700, #00FFFF)"
+    }
+  },
+
+  "tech_stack": {
+    "frontend": {
+      "languages": ["HTML5", "CSS3", "JavaScript (Vanilla)"],
+      "fonts": ["Inter (Google Fonts)", "JetBrains Mono (Google Fonts)"],
+      "libraries": ["Highlight.js for code syntax highlighting"],
+      "animation": "CSS keyframes + JavaScript"
+    },
+    "backend": {
+      "language": "Python 3.12",
+      "framework": "Flask",
+      "packages": [
+        "flask",
+        "flask-cors",
+        "groq",
+        "python-dotenv",
+        "fpdf2",
+        "python-docx"
+      ]
+    },
+    "ai": {
+      "provider": "Groq",
+      "model": "llama-3.3-70b-versatile",
+      "purpose": "Code explanation, segment parsing for non-Python files, interactive chat"
+    },
+    "code_parsing": {
+      "python_files": "Python ast module",
+      "other_languages": "Groq AI parsing"
+    }
+  },
+
+  "project_structure": {
+    "root": "code-sense/",
+    "files": {
+      "backend": [
+        "app.py              — Flask server, all API routes",
+        "agent.py            — AI brain, explanation functions",
+        "tools.py            — Code parser, file reader",
+        "requirements.txt    — All Python packages"
+      ],
+      "frontend": [
+        "static/index.html   — Main HTML file, all pages",
+        "static/style.css    — All styles and animations",
+        "static/script.js    — All interactivity and API calls"
+      ],
+      "config": [
+        ".env                — Real API key (never on GitHub)",
+        ".env.example        — Fake placeholder (safe for GitHub)",
+        ".gitignore          — Files to exclude from GitHub",
+        "README.md           — Project documentation"
+      ]
+    }
+  },
+
+  "pages": {
+    "page_1_hero": {
+      "name": "Hero",
+      "trigger": "Default landing page",
+      "layout": "two_column",
+      "left_side": {
+        "content": [
+          "Website name — CodeSense in large gold typography",
+          "Subheading — Learn to build with AI in white",
+          "Short paragraph — describing what CodeSense does",
+          "CTA button — Get Started scrolls to upload section"
+        ]
+      },
+      "right_side": {
+        "content": [
+          "Animated visual — floating code particles or a glowing orb",
+          "Animation style — CSS keyframes with gold and cyan colors",
+          "Could show rotating code snippets in different languages"
+        ]
+      },
+      "animations": [
+        "Hero title fades in on load",
+        "Subheading slides up with delay",
+        "Right side animation loops infinitely",
+        "Subtle background particle effect"
+      ]
+    },
+
+    "page_2_upload": {
+      "name": "Upload",
+      "trigger": "Scroll down from hero or click Get Started",
+      "layout": "two_column",
+      "left_side": {
+        "content": [
+          "Square file upload box with dashed gold border",
+          "Upload icon in the center of the box",
+          "Drag and drop supported",
+          "Click to browse files also supported",
+          "Text below box — Upload any programming file"
+        ],
+        "supported_formats": [
+          ".py", ".js", ".ts", ".html", ".css",
+          ".java", ".cpp", ".c", ".cs", ".php",
+          ".rb", ".go", ".rs", ".swift"
+        ],
+        "states": {
+          "default": "Dashed gold border, upload icon",
+          "drag_over": "Solid cyan border, glow effect",
+          "file_loaded": "Shows filename and file size, green checkmark"
+        }
+      },
+      "right_side": {
+        "content": [
+          "Rectangle text input for personality",
+          "Placeholder — e.g. Friendly big brother, Strict professor...",
+          "Text below input — Set any personality for your AI tutor",
+          "Analyze Code button below in gold"
+        ],
+        "button": {
+          "text": "Analyze Code",
+          "color": "gold background, black text",
+          "hover": "cyan glow effect",
+          "loading_state": "Shows spinner and Analyzing... text"
+        }
+      }
+    },
+
+    "page_3_about": {
+      "name": "About",
+      "trigger": "Scroll down from upload section",
+      "layout": "mixed",
+      "sections": [
+        {
+          "section": "Project Story",
+          "content": "Why CodeSense was built — the problem of AI-induced passivity and people not understanding their own code"
+        },
+        {
+          "section": "How It Works",
+          "content": "Three simple steps — Upload, Choose Personality, Learn. Visual step cards with gold icons."
+        },
+        {
+          "section": "Features",
+          "content": [
+            "Supports 14+ programming languages",
+            "Customizable AI tutor personality",
+            "Interactive segment-by-segment explanation",
+            "Built-in chat for follow-up questions",
+            "Downloadable PDF and Word report"
+          ]
+        },
+        {
+          "section": "Connect",
+          "content": [
+            "GitHub link — TBD",
+            "Email — TBD",
+            "Built with Groq + LLaMA 3.3"
+          ]
+        }
+      ]
+    },
+
+    "page_4_working": {
+      "name": "Working",
+      "trigger": "Only appears after clicking Analyze Code button",
+      "description": "This page replaces the scroll layout entirely. User is taken here after analysis is complete.",
+      "layout": "two_column_fixed",
+      "left_side": {
+        "name": "Code Panel",
+        "content": [
+          "Full code of the uploaded file",
+          "Syntax highlighted using Highlight.js",
+          "Line numbers shown",
+          "Scrollable if code is long",
+          "Language tag shown at top right of panel"
+        ],
+        "styling": {
+          "background": "#111111",
+          "border": "1px solid #FFD700",
+          "font": "JetBrains Mono"
+        }
+      },
+      "right_side": {
+        "name": "Segments Panel",
+        "content": [
+          "List of all segments found in the code",
+          "Each segment shown as a card",
+          "Each card has the segment name and type",
+          "Each card has an info button on the right"
+        ],
+        "segment_card": {
+          "shows": ["Segment type (function, class, block)", "Segment name", "Info button (ℹ️)"],
+          "styling": {
+            "background": "#111111",
+            "border_left": "3px solid #FFD700",
+            "hover": "cyan glow on border"
+          }
+        },
+        "info_button": {
+          "icon": "ℹ️",
+          "color": "cyan",
+          "on_click": "Opens chatbox for that segment"
+        }
+      },
+      "chatbox": {
+        "trigger": "Clicking the ℹ️ info button on any segment",
+        "position": "Floating overlay, centered on screen",
+        "behavior": [
+          "Opens with a smooth fade-in animation",
+          "First message is auto-generated explanation of the segment",
+          "User can type follow-up questions",
+          "AI responds in the chosen personality",
+          "Full conversation history maintained per segment",
+          "Clicking outside the chatbox closes it smoothly",
+          "Reopening same segment restores previous conversation"
+        ],
+        "layout": {
+          "header": "Segment name + close button",
+          "body": "Scrollable chat messages",
+          "footer": "Text input + Send button"
+        },
+        "message_styles": {
+          "ai_message": "Left aligned, gold accent border",
+          "user_message": "Right aligned, cyan accent border"
+        },
+        "styling": {
+          "background": "#111111",
+          "border": "1px solid #FFD700",
+          "glow": "gold glow effect",
+          "border_radius": "16px"
+        }
+      },
+      "top_bar": {
+        "content": [
+          "CodeSense logo on the left",
+          "Filename shown in the center",
+          "Download Report button on the right (PDF or Word)"
+        ]
+      }
+    }
+  },
+
+  "backend_api_routes": {
+    "POST /analyze": {
+      "description": "Receives code file and personality, returns parsed segments",
+      "input": {
+        "file": "The uploaded code file",
+        "personality": "The tutor personality string",
+        "filename": "The original filename with extension"
+      },
+      "output": {
+        "segments": "List of segment objects with type, name, code, children, lines"
+      }
+    },
+    "POST /explain": {
+      "description": "Receives a segment and returns an initial explanation",
+      "input": {
+        "segment_code": "The code of the segment",
+        "segment_name": "The name of the segment",
+        "segment_type": "function, class, or block",
+        "personality": "The tutor personality string"
+      },
+      "output": {
+        "explanation": "AI generated explanation of the segment"
+      }
+    },
+    "POST /chat": {
+      "description": "Handles follow-up chat messages within a segment chatbox",
+      "input": {
+        "message": "The user's follow-up question",
+        "segment_code": "Context — the segment being discussed",
+        "history": "Full conversation history so far",
+        "personality": "The tutor personality string"
+      },
+      "output": {
+        "reply": "AI response to the user's question"
+      }
+    },
+    "POST /download": {
+      "description": "Generates and returns a PDF or Word report of all explanations",
+      "input": {
+        "segments": "All segments with their explanations",
+        "personality": "The tutor personality used",
+        "filename": "Original code filename",
+        "format": "pdf or docx"
+      },
+      "output": {
+        "file": "Downloadable PDF or Word document"
+      }
+    }
+  },
+
+  "agent_logic": {
+    "code_parsing": {
+      "python": "Uses Python ast module to extract top-level and nested functions and classes",
+      "other_languages": "Uses Groq AI to identify logical segments and return structured JSON"
+    },
+    "explanation_levels": {
+      "whole_segment": "2-3 sentence summary of what the whole segment does",
+      "interactive_chat": "Full conversation with the AI about the segment with follow-up questions"
+    },
+    "chat_memory": {
+      "scope": "Per segment — each segment has its own conversation history",
+      "storage": "JavaScript object in the browser, keyed by segment name",
+      "persistence": "Lives for the duration of the session only"
+    }
+  },
+
+  "features": {
+    "mvp": [
+      "File upload — drag and drop or click to browse",
+      "Custom tutor personality",
+      "Code segmentation — Python ast + AI for other languages",
+      "Segment list with info buttons",
+      "Interactive chatbox per segment",
+      "Full code view with syntax highlighting",
+      "Download report as PDF or Word"
+    ],
+    "future_versions": [
+      "Multiple file upload and project-wide analysis",
+      "GitHub repository URL input — analyze entire repos",
+      "User accounts and saved sessions",
+      "Segment relationship diagram — visual map of how segments connect",
+      "Quiz mode — AI tests your understanding after explanation",
+      "Voice tutor — AI explains code out loud",
+      "VS Code extension"
+    ]
+  },
+
+  "build_order": [
+    {
+      "step": 1,
+      "file": "app.py (Flask)",
+      "description": "Set up Flask server with all four API routes"
+    },
+    {
+      "step": 2,
+      "file": "tools.py",
+      "description": "Code parser — Python ast + AI parser for other languages"
+    },
+    {
+      "step": 3,
+      "file": "agent.py",
+      "description": "All Groq API functions — explain, chat, parse non-Python"
+    },
+    {
+      "step": 4,
+      "file": "static/index.html",
+      "description": "All four pages — Hero, Upload, About, Working"
+    },
+    {
+      "step": 5,
+      "file": "static/style.css",
+      "description": "Full black gold cyan theme, animations, responsive layout"
+    },
+    {
+      "step": 6,
+      "file": "static/script.js",
+      "description": "All interactivity — file upload, API calls, chatbox, segment rendering"
+    },
+    {
+      "step": 7,
+      "file": "README.md",
+      "description": "Project documentation for GitHub"
+    },
+    {
+      "step": 8,
+      "task": "Test end to end",
+      "description": "Upload a real file, analyze, chat, download report"
+    },
+    {
+      "step": 9,
+      "task": "Push to GitHub",
+      "description": "Initialize git repo, add files, push to GitHub"
+    }
+  ],
+
+  "key_principles": [
+    "Build backend first, frontend second",
+    "Test each API route before building the UI",
+    "Keep .env out of GitHub always",
+    "Every feature should work before moving to the next",
+    "Mobile responsiveness is optional for MVP"
+  ]
+}

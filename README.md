@@ -155,7 +155,7 @@ AI is awesome, we can build anything with it. THAT is DANGEROUS. People are gene
 
 If you find any issue with this project, please give me suggestion and guidence. I would love to learn and improve my skills and knowledge.
 
-- GitHub — coming soon
-- Email — coming soon
+- GitHub — https://github.com/Ankan-James
+- Email — ankan23092007@gmail.com
 
 ---

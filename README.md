@@ -1,16 +1,16 @@
-# CodeSense 🧠
+# CodeSense 
 
 > **Learn to build with AI**
 
-CodeSense is an AI-powered code tutor that takes any programming file, breaks it into logical segments, and lets you chat with an AI tutor about each segment — in any personality you choose.
+CodeSense is an AI-powered code tutor that takes any programming file, breaks it into logical segments, and lets you chat with an AI tutor about each segment in any personality you choose.
 
-Built for people who are tired of copying code without understanding it.
+Built for people who are tired of copying code without understanding it. [ Like me :D ]
 
 ---
 
 ## The Problem
 
-AI tools like ChatGPT and GitHub Copilot make it dangerously easy to generate code without understanding it. People are becoming dependent on AI to write code they can't read, debug, or explain.
+AI makes it really easy to generate code without understanding it. People are becoming too much dependent on AI to write code which they can't read, debug, or explain.
 
 CodeSense fights that.
 
@@ -23,12 +23,6 @@ CodeSense fights that.
 3. **Explore** your code broken into a recursive tree of segments
 4. **Click** any segment to open a chat and learn exactly what it does, how it works, and why it matters
 5. **Download** a full explanation report as PDF or Word
-
----
-
-## Demo
-
-> Coming soon
 
 ---
 
@@ -65,6 +59,7 @@ CodeSense fights that.
 
 ```
 code-sense/
+├── codesense_plan_v2.json  — Plan and Structure of everything
 ├── app.py                  — Flask server, all API routes
 ├── agent.py                — Groq API functions (explain, chat, parse)
 ├── tools.py                — Code parser (ast + AI)
@@ -72,8 +67,8 @@ code-sense/
 ├── .env.example            — Environment variable template
 ├── .gitignore              — Files excluded from GitHub
 └── static/
-    ├── index.html          — All pages (Hero, Upload, About, Working)
-    ├── style.css           — Black, Gold, Cyan theme + animations
+    ├── index.html          — Skeleton pages (Hero, Upload, About, Working)
+    ├── style.css           — Styless (so the UI is not awful)
     └── script.js           — Interactivity, segment rendering, chatbox
 ```
 
@@ -145,7 +140,7 @@ http://localhost:5000
 ## Features
 
 - 🧠 AI-powered code explanation using LLaMA 3.3
-- 🌲 Recursive segment tree — drill as deep as the code goes
+- 🌲 Recursive segment tree drill as deep as the code goes
 - 💬 Interactive chatbox per segment with conversation memory
 - 🎭 Fully customizable tutor personality
 - 📄 Downloadable PDF and Word report
@@ -154,37 +149,13 @@ http://localhost:5000
 
 ---
 
-## Roadmap
-
-- [ ] Multiple file upload and project-wide analysis
-- [ ] GitHub repository URL input
-- [ ] Segment relationship diagram
-- [ ] Quiz mode — AI tests your understanding
-- [ ] Voice tutor
-- [ ] VS Code extension
-- [ ] User accounts and saved sessions
-
----
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
----
-
-## License
-
-MIT License — feel free to use, modify, and distribute.
-
----
-
 ## Author
 
-Built by a beginner, for beginners. 
+AI is awesome, we can build anything with it. THAT is DANGEROUS. People are generating code and using them without learning everything. It feels like we are taking credit to someone's works. [ This bothers me a lot >:/ ]. I would be honest, I don't know how to build proper working projects either so I asked AI to build CodeSense. CodeSense is build for people like me who wants to learn raw coding and build their own things.
+
+If you find any issue with this project, please give me suggestion and guidence. I would love to learn and improve my skills and knowledge.
 
 - GitHub — coming soon
 - Email — coming soon
 
 ---
-
-> *"The best way to learn code is to read code. The best way to read code is to have someone explain it."*
